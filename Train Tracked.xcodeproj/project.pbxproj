@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		985ED64920237AC900EA1F87 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985ED64820237AC900EA1F87 /* MapKit.framework */; };
 		98611D0320223D3000BF1C67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98611D0220223D3000BF1C67 /* AppDelegate.swift */; };
 		98611D0520223D3000BF1C67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98611D0420223D3000BF1C67 /* ViewController.swift */; };
 		98611D0820223D3000BF1C67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98611D0620223D3000BF1C67 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		985ED64820237AC900EA1F87 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		98611CFF20223D3000BF1C67 /* Train Tracked.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Train Tracked.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98611D0220223D3000BF1C67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98611D0420223D3000BF1C67 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				985ED64920237AC900EA1F87 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		985ED64720237AC900EA1F87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				985ED64820237AC900EA1F87 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		98611CF620223D3000BF1C67 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +92,7 @@
 				98611D1620223D3100BF1C67 /* Train TrackedTests */,
 				98611D2120223D3100BF1C67 /* Train TrackedUITests */,
 				98611D0020223D3000BF1C67 /* Products */,
+				985ED64720237AC900EA1F87 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -194,6 +206,14 @@
 					98611CFE20223D3000BF1C67 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					98611D1220223D3100BF1C67 = {
 						CreatedOnToolsVersion = 9.2;
@@ -427,9 +447,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9PNCMERM3A;
 				INFOPLIST_FILE = "Train Tracked/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "COMPBS.Train-Tracked";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -441,9 +461,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9PNCMERM3A;
 				INFOPLIST_FILE = "Train Tracked/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "COMPBS.Train-Tracked";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
