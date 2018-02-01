@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E67CD532023C8BB00806FF3 /* RailRoadCrossing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E67CD522023C8BB00806FF3 /* RailRoadCrossing.swift */; };
 		985ED64920237AC900EA1F87 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985ED64820237AC900EA1F87 /* MapKit.framework */; };
 		98611D0320223D3000BF1C67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98611D0220223D3000BF1C67 /* AppDelegate.swift */; };
 		98611D0520223D3000BF1C67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98611D0420223D3000BF1C67 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		1E67CD512023AAAC00806FF3 /* Train Tracked.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Train Tracked.entitlements"; sourceTree = "<group>"; };
+		1E67CD522023C8BB00806FF3 /* RailRoadCrossing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailRoadCrossing.swift; sourceTree = "<group>"; };
 		985ED64820237AC900EA1F87 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		98611CFF20223D3000BF1C67 /* Train Tracked.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Train Tracked.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98611D0220223D3000BF1C67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				98611D0920223D3000BF1C67 /* Assets.xcassets */,
 				98611D0B20223D3000BF1C67 /* LaunchScreen.storyboard */,
 				98611D0E20223D3000BF1C67 /* Info.plist */,
+				1E67CD522023C8BB00806FF3 /* RailRoadCrossing.swift */,
 			);
 			path = "Train Tracked";
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			files = (
 				98611D0520223D3000BF1C67 /* ViewController.swift in Sources */,
 				98611D0320223D3000BF1C67 /* AppDelegate.swift in Sources */,
+				1E67CD532023C8BB00806FF3 /* RailRoadCrossing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
