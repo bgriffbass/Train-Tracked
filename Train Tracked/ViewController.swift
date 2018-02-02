@@ -14,8 +14,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
 
     @IBOutlet weak var mapView: MKMapView!
     
-    //pulls railroad crossing pin
-    var pin:RailRoadCrossing!
+    //pulls railroad crossing pin1
+    var pin1:RailRoadCrossing!
     
     //initiates location manager
     let locationManager = CLLocationManager()
@@ -28,9 +28,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         let coordinate = CLLocationCoordinate2D(latitude: 33.991978, longitude: -81.038677)
         let region = MKCoordinateRegionMakeWithDistance(coordinate, 1000, 1000)
         mapView.setRegion(region, animated: true)
-        
-        pin = RailRoadCrossing(title: "Devine St Crossing", Subtitle: "train is coming", coordinate: coordinate)
-        mapView.addAnnotation(pin)
+      
+        //This is the first pin - Devine Street and N/A
+        pin1 = RailRoadCrossing(title: "Devine St Crossing", Subtitle: "train is coming", coordinate: coordinate)
+        mapView.addAnnotation(pin1)
         
         
         /*BUG ALERT*/
@@ -66,7 +67,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let annotationView = MKAnnotationView(annotation: pin, reuseIdentifier: "RRPin")
+        let annotationView = MKAnnotationView(annotation: pin1, reuseIdentifier: "RRPin")
         annotationView.image = UIImage(named: "rail-road-crossing-cross-signal")
         //change pin size to correctly fit the mapview, without the next few lines this image is huge
         let transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
