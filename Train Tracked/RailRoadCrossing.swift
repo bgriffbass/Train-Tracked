@@ -2,7 +2,7 @@
 //  RailRoadCrossing.swift
 //  Train Tracked
 //
-//  Created by ICARE, USC on 2/1/18.
+//  Created by Bryan Griffin on 2/1/18.
 //  Copyright © 2018 Computers and BS. All rights reserved.
 //
 

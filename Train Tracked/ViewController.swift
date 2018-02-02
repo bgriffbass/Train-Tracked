@@ -15,7 +15,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     @IBOutlet weak var mapView: MKMapView!
     
     //pulls railroad crossing pin
-    var pin:RailRoadCrossing!
+    var pin1:RailRoadCrossing!
     
     //initiates location manager
     let locationManager = CLLocationManager()
@@ -29,8 +29,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         let region = MKCoordinateRegionMakeWithDistance(coordinate, 1000, 1000)
         mapView.setRegion(region, animated: true)
         
-        pin = RailRoadCrossing(title: "Devine St Crossing", Subtitle: "train is coming", coordinate: coordinate)
-        mapView.addAnnotation(pin)
+        //creates the first pin and correctly names it
+        pin1 = RailRoadCrossing(title: "Devine St Crossing", Subtitle: "train is coming", coordinate: coordinate)
+        mapView.addAnnotation(pin1)
         
         
         /*BUG ALERT*/
@@ -38,10 +39,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         /*BUG ALERT*/
 
         
-        //assign the devine street rr crossing pin to the rr crossing image
+        //i dont know what this does but it is required
         mapView.delegate = self
         
         
+        
+    
         
         
         //request user location
@@ -64,9 +67,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         mapView.setRegion(region, animated: true)
         mapView.showsUserLocation = true
     }
-    
+    //this function sets up the RR pin as the correct image
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let annotationView = MKAnnotationView(annotation: pin, reuseIdentifier: "RRPin")
+        let annotationView = MKAnnotationView(annotation: pin1, reuseIdentifier: "RRPin")
         annotationView.image = UIImage(named: "rail-road-crossing-cross-signal")
         //change pin size to correctly fit the mapview, without the next few lines this image is huge
         let transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
