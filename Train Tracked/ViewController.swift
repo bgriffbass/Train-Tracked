@@ -21,7 +21,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     
     
-    //initiates location manager 
+    //initiates location manager
     let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
@@ -74,7 +74,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         /*BUG ALERT*/
 
         //this line delegates the map view to the user, but also changes the user icon to the rr crossing icon so i removed it for the time being
-        //mapView.delegate = self
+        mapView.delegate = self
         
         //request user location
         locationManager.delegate = self
@@ -105,7 +105,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         annotationView.image = UIImage(named: "rail-road-crossing-cross-signal")
         //change pin size to correctly fit the mapview, without the next few lines this image is huge
-        let transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+        let transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
         annotationView.transform = transform
         return annotationView
     }
