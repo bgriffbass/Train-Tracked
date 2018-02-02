@@ -43,7 +43,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         mapView.delegate = self
         
         
-        //test to see if master changes, i made a branch and protected the master so that its safe
+        //test to see if master changes, i made a branch and protected the master so that its safe.
     
         
         
