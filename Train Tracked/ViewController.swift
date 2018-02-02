@@ -46,12 +46,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         pin2 = RailRoadCrossing(title: "Main St Crossing", Subtitle: "trains may come to stop", coordinate: coordinate2)
         mapView.addAnnotation(pin2)
         
-        //railroad crossing at main street
+        //railroad crossing at assembly street
         let coordinate3 = CLLocationCoordinate2D(latitude: 33.989983, longitude: -81.030436)
         let region3 = MKCoordinateRegionMakeWithDistance(coordinate3, 1000, 1000)
         mapView.setRegion(region3, animated: true)
         
-        //creates pin2 and names it
+        //creates pin3 and names it
         pin3 = RailRoadCrossing(title: "Assembly St Crossing", Subtitle: "trains may come to stop", coordinate: coordinate3)
         mapView.addAnnotation(pin3)
         
