@@ -111,11 +111,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         let span = MKCoordinateSpan(latitudeDelta: 0.015, longitudeDelta: 0.015)
         let region = MKCoordinateRegion(center: center, span: span)
         
-        mapView.setRegion(region, animated: true)
+        mapView.setRegion(region, animated: false)
         mapView.showsUserLocation = true
     }
     //this function sets up the RR pins as the correct image
-    func mapView(_mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let annotationView = MKAnnotationView(annotation: pin1, reuseIdentifier: "RRPin")   //divine st pin
         _ = MKAnnotationView(annotation: pin2, reuseIdentifier: "RRPin")    //main st pin
         _ = MKAnnotationView(annotation: pin3, reuseIdentifier: "RRPin")    //assembly st pin
@@ -129,7 +129,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         annotationView.image = UIImage(named: "rail-road-crossing-cross-signal")
         //change pin size to correctly fit the mapview, without the next few lines this image is huge
-        let transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
+        let transform = CGAffineTransform(scaleX: 0.05, y: 0.05)
         annotationView.transform = transform
         return annotationView
     }
