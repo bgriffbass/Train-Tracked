@@ -18,6 +18,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     var pin1:RailRoadCrossing!  //divine street
     var pin2:RailRoadCrossing!  //main street
     var pin3:RailRoadCrossing!  //assembly street
+    var pin4:RailRoadCrossing!  //whaley street
+    var pin5:RailRoadCrossing!  //pickens street
+    
+    
+    
     
     
     
@@ -55,10 +60,23 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         pin3 = RailRoadCrossing(title: "Assembly St Crossing", Subtitle: "trains may come to stop", coordinate: coordinate3)
         mapView.addAnnotation(pin3)
         
+        //railroad crossing at whaley street
+        let coordinate4 = CLLocationCoordinate2D(latitude: 33.988311, longitude: -81.025988)
+        let region4 = MKCoordinateRegionMakeWithDistance(coordinate3, 1000, 1000)
+        mapView.setRegion(region4, animated: true)
         
+        //creates pin4 and names it
+        pin4 = RailRoadCrossing(title: "Whaley St Crossing", Subtitle: "trains may come to stop", coordinate: coordinate4)
+        mapView.addAnnotation(pin4)
         
+        //railroad crossing at pickens street
+        let coordinate5 = CLLocationCoordinate2D(latitude: 33.993195, longitude: -81.022663)
+        let region5 = MKCoordinateRegionMakeWithDistance(coordinate3, 1000, 1000)
+        mapView.setRegion(region5, animated: true)
         
-        
+        //creates pin5 and names it
+        pin5 = RailRoadCrossing(title: "Pickens St Crossing", Subtitle: "trains may come to stop", coordinate: coordinate5)
+        mapView.addAnnotation(pin5)
         
         
         
@@ -96,12 +114,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         mapView.setRegion(region, animated: true)
         mapView.showsUserLocation = true
     }
-    //this function sets up the RR pin as the correct image
+    //this function sets up the RR pins as the correct image
     func mapView(_mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let annotationView = MKAnnotationView(annotation: pin1, reuseIdentifier: "RRPin")   //divine st pin
         _ = MKAnnotationView(annotation: pin2, reuseIdentifier: "RRPin")    //main st pin
         _ = MKAnnotationView(annotation: pin3, reuseIdentifier: "RRPin")    //assembly st pin
-
+        _ = MKAnnotationView(annotation: pin4, reuseIdentifier: "RRPin")    //Whaley st pin
+        _ = MKAnnotationView(annotation: pin5, reuseIdentifier: "RRPin")    //Pickens st pin
+        
+        
+        
+        
+        
         
         annotationView.image = UIImage(named: "rail-road-crossing-cross-signal")
         //change pin size to correctly fit the mapview, without the next few lines this image is huge
