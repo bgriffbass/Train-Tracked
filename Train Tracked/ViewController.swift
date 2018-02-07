@@ -24,6 +24,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     
     
+   
+    
+    
+    
     
     
     //initiates location manager
@@ -31,6 +35,88 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        //request user location
+        //locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        
+        //locationManager.startUpdatingLocation()
+        
+        
+        
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+
+        }
+        
+        
+        
+        
+        
+        /*
+        
+        //Direction manager
+        mapView.showsScale = true
+        mapView.showsPointsOfInterest = true
+        
+        
+        //set beginning and destination locations so that we can give directions between them
+        let sourceCoordinates = locationManager.location?.coordinate
+        //test destination for now
+        let destCoordinates = CLLocationCoordinate2DMake(33.991978, -81.039111)
+        let sourcePlacemark = MKPlacemark(coordinate: sourceCoordinates!)
+        let destPlacemark = MKPlacemark(coordinate: destCoordinates)
+        
+        let sourceItem = MKMapItem(placemark: sourcePlacemark)
+        let destItem = MKMapItem(placemark: destPlacemark)
+        
+        let directionRequest = MKDirectionsRequest()
+        directionRequest.source = sourceItem
+        directionRequest.destination = destItem
+        directionRequest.transportType = .automobile
+        //directionRequest.transportType = .walking
+        
+        let directions = MKDirections(request: directionRequest)
+        directions.calculate(completionHandler: {
+            response, error in
+        
+            guard let response = response else {
+                if error != nil {
+                    print("Something went wrong")
+                }
+                return
+            }
+            
+            let route = response.routes[0]
+            self.mapView.add(route.polyline, level: .aboveRoads)
+            
+            let rekt = route.polyline.boundingMapRect
+            self.mapView.setRegion(MKCoordinateRegionForMapRect(rekt), animated: true)
+        })
+        
+        */
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         //railroad crossing at divine street
@@ -86,18 +172,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         
         
-        
         /*BUG ALERT*/
         //the pin and the user location are both set to the railroad crossing image, fix later
         /*BUG ALERT*/
 
-        //this line delegates the map view to the user, but also changes the user icon to the rr crossing icon so i removed it for the time being
         mapView.delegate = self
         
-        //request user location
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
         
     
     }
@@ -115,13 +195,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         mapView.showsUserLocation = true
     }
     //this function sets up the RR pins as the correct image
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+/*    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let annotationView = MKAnnotationView(annotation: pin1, reuseIdentifier: "RRPin")   //divine st pin
         _ = MKAnnotationView(annotation: pin2, reuseIdentifier: "RRPin")    //main st pin
         _ = MKAnnotationView(annotation: pin3, reuseIdentifier: "RRPin")    //assembly st pin
         _ = MKAnnotationView(annotation: pin4, reuseIdentifier: "RRPin")    //Whaley st pin
         _ = MKAnnotationView(annotation: pin5, reuseIdentifier: "RRPin")    //Pickens st pin
-        
+
         
         
         
@@ -132,6 +212,19 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         let transform = CGAffineTransform(scaleX: 0.05, y: 0.05)
         annotationView.transform = transform
         return annotationView
+      }
+     
+     */
+    
+    
+    
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let renderer = MKPolylineRenderer(overlay: overlay)
+        renderer.strokeColor = UIColor.blue
+        renderer.lineWidth = 5.0
+        
+        return renderer
     }
 
 }
