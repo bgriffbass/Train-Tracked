@@ -24,7 +24,8 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="bh8-Gy-JsC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1rb-ug-hDO"/>
+                            <constraint firstItem="bh8-Gy-JsC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="38M-zi-eeO"/>
+                            <constraint firstItem="bh8-Gy-JsC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CFq-7a-rb9"/>
                             <constraint firstItem="bh8-Gy-JsC" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="GL0-oV-cWT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bh8-Gy-JsC" secondAttribute="trailing" id="MbN-r4-5dy"/>
                             <constraint firstItem="bh8-Gy-JsC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Nqi-28-PqS"/>
@@ -33,6 +34,7 @@
                             <constraint firstItem="bh8-Gy-JsC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WL1-10-Osw"/>
                             <constraint firstItem="bh8-Gy-JsC" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="cKk-Xd-eWg"/>
                             <constraint firstItem="bh8-Gy-JsC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mPs-tz-uOx"/>
+                            <constraint firstItem="bh8-Gy-JsC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nno-D8-N89"/>
                             <constraint firstAttribute="bottom" secondItem="bh8-Gy-JsC" secondAttribute="bottom" id="qaK-2z-nwU"/>
                             <constraint firstItem="bh8-Gy-JsC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wm7-L5-9oQ"/>
                             <constraint firstItem="bh8-Gy-JsC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wxQ-uG-yCJ"/>
