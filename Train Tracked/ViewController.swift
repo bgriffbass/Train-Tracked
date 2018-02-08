@@ -29,7 +29,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     
     
-    
     //initiates location manager
     let locationManager = CLLocationManager()
     
