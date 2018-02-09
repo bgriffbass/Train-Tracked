@@ -21,8 +21,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     var pin4:RailRoadCrossing!  //whaley street
     var pin5:RailRoadCrossing!  //pickens street
     var pin6:RailRoadCrossing!  //huger street
-    
-    
+    var pin7:RailRoadCrossing!  //rosewood dr and assembly st
+    var pin8:RailRoadCrossing!  //S assembly st and dreyfuss st
     
    
     
@@ -172,16 +172,25 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         pin6 = RailRoadCrossing(title: "Huger St Crossing", subtitle: "trains may come to stop", coordinate: coordinate6)
         mapView.addAnnotation(pin6)
         
+        //railroad crossing at rosewood dr and assembly street
+        let coordinate7 = CLLocationCoordinate2D(latitude: 33.981408, longitude: -81.022349)
+        let region7 = MKCoordinateRegionMakeWithDistance(coordinate7, 1000, 1000)
+        mapView.setRegion(region7, animated: true)
         
+        //creates pin7 and names it
+        pin7 = RailRoadCrossing(title: "Rosewood and Assembly St Crossing", subtitle: "trains may come to stop", coordinate: coordinate7)
+        mapView.addAnnotation(pin7)
         
+        //railroad crossing at S assembly st and dreyfuss rd
+        let coordinate8 = CLLocationCoordinate2D(latitude: 33.984220, longitude: -81.027861)
+        let region8 = MKCoordinateRegionMakeWithDistance(coordinate8, 1000, 1000)
+        mapView.setRegion(region8, animated: true)
         
-        
-        
+        //creates pin8 and names it
+        pin8 = RailRoadCrossing(title: "S Assembly St and Drefuss Rd Crossing", subtitle: "trains may come to stop", coordinate: coordinate8)
+        mapView.addAnnotation(pin8)
         
 
-        
-        
-        //test to see if master changes, i made a branch and protected the master so that its safe.
     
         
         
@@ -207,8 +216,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
 
     }
     //this function sets up the RR pins as the correct image
-    
-    
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         //makes sure the user location is not changed to the rr crossing icon
         if (annotation is MKUserLocation) {
@@ -221,6 +228,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         _ = MKAnnotationView(annotation: pin4, reuseIdentifier: "RRPin")    //Whaley st pin
         _ = MKAnnotationView(annotation: pin5, reuseIdentifier: "RRPin")    //Pickens st pin
         _ = MKAnnotationView(annotation: pin6, reuseIdentifier: "RRPin")    //Huger st pin
+        _ = MKAnnotationView(annotation: pin7, reuseIdentifier: "RRPin")    //rosewood dr and assembly st pin
+        _ = MKAnnotationView(annotation: pin8, reuseIdentifier: "RRPin")    //S assembly st and dreyfuss rd pin
+
+        
+        
         
         annotationView.image = UIImage(named: "rail-road-crossing-cross-signal")
         //change pin size to correctly fit the mapview, without the next few lines this image is huge
