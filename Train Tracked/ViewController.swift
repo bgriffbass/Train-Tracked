@@ -25,7 +25,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     var pin8:RailRoadCrossing!  //S assembly st and dreyfuss st
     var pin9:RailRoadCrossing!  //catawba st
     var pin10:RailRoadCrossing! //assembly st near the lofts
-    //make pins for whaley2, greek village, and more
+    var pin11:RailRoadCrossing! //gadsden st 1 (north)
+    var pin12:RailRoadCrossing! //gadsden st 2 (middle)
+    var pin13:RailRoadCrossing! //gadsden st 3 (south)
+    var pin14:RailRoadCrossing! //whaley st near lincoln st
+    var pin15:RailRoadCrossing! //lincoln st 1 (north)
+    var pin16:RailRoadCrossing! //lincoln st 2 (south)
+    var pin17:RailRoadCrossing! //wheat st
+    var pin18:RailRoadCrossing! //greene st
+    
     
     
     
@@ -208,6 +216,79 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         pin10 = RailRoadCrossing(title: "Assembly St near The Lofts Crossing", Subtitle: "trains may come to stop", coordinate: coordinate10)
         mapView.addAnnotation(pin10)
         
+        //railroad crossing at Gadsden st 1 (north)
+        let coordinate11 = CLLocationCoordinate2D(latitude: 33.988631, longitude: -81.035352)
+        let region11 = MKCoordinateRegionMakeWithDistance(coordinate11, 1000, 1000)
+        mapView.setRegion(region11, animated: true)
+        
+        //creates pin11 and names it
+        pin11 = RailRoadCrossing(title: "Gadsden St 1 Crossing", Subtitle: "trains may come to stop", coordinate: coordinate11)
+        mapView.addAnnotation(pin11)
+        
+        //railroad crossing at Gadsden st 2 (middle)
+        let coordinate12 = CLLocationCoordinate2D(latitude: 33.988436, longitude: -81.035266)
+        let region12 = MKCoordinateRegionMakeWithDistance(coordinate12, 1000, 1000)
+        mapView.setRegion(region12, animated: true)
+        
+        //creates pin12 and names it
+        pin12 = RailRoadCrossing(title: "Gadsden St 2 Crossing", Subtitle: "trains may come to stop", coordinate: coordinate12)
+        mapView.addAnnotation(pin12)
+        
+        //railroad crossing at Gadsden st 3 (south)
+        let coordinate13 = CLLocationCoordinate2D(latitude: 33.987810, longitude: -81.034985)
+        let region13 = MKCoordinateRegionMakeWithDistance(coordinate13, 1000, 1000)
+        mapView.setRegion(region13, animated: true)
+        
+        //creates pin13 and names it
+        pin13 = RailRoadCrossing(title: "Gadsden St 3 Crossing", Subtitle: "trains may come to stop", coordinate: coordinate13)
+        mapView.addAnnotation(pin13)
+        
+        //railroad crossing at whaley st near lincoln st
+        let coordinate14 = CLLocationCoordinate2D(latitude: 33.986344, longitude: -81.032035)
+        let region14 = MKCoordinateRegionMakeWithDistance(coordinate14, 1000, 1000)
+        mapView.setRegion(region14, animated: true)
+        
+        //creates pin14 and names it
+        pin14 = RailRoadCrossing(title: "Whaley St near Lincoln St Crossing", Subtitle: "trains may come to stop", coordinate: coordinate14)
+        mapView.addAnnotation(pin14)
+        
+        //railroad crossing at lincoln st (north)
+        let coordinate15 = CLLocationCoordinate2D(latitude: 33.988969, longitude: -81.033622)
+        let region15 = MKCoordinateRegionMakeWithDistance(coordinate14, 1000, 1000)
+        mapView.setRegion(region15, animated: true)
+        
+        //creates pin15 and names it
+        pin15 = RailRoadCrossing(title: "N Lincoln St Crossing", Subtitle: "trains may come to stop", coordinate: coordinate15)
+        mapView.addAnnotation(pin15)
+        
+        //railroad crossing at lincoln st (south)
+        let coordinate16 = CLLocationCoordinate2D(latitude: 33.986613, longitude: -81.032556)
+        let region16 = MKCoordinateRegionMakeWithDistance(coordinate16, 1000, 1000)
+        mapView.setRegion(region16, animated: true)
+        
+        //creates pin16 and names it
+        pin16 = RailRoadCrossing(title: "S Lincoln St Crossing", Subtitle: "trains may come to stop", coordinate: coordinate16)
+        mapView.addAnnotation(pin16)
+        
+        //railroad crossing at wheat st
+        let coordinate17 = CLLocationCoordinate2D(latitude: 33.994188, longitude: -81.021639)
+        let region17 = MKCoordinateRegionMakeWithDistance(coordinate17, 1000, 1000)
+        mapView.setRegion(region17, animated: true)
+        
+        //creates pin17 and names it
+        pin17 = RailRoadCrossing(title: "Wheat St Crossing", Subtitle: "trains may come to stop", coordinate: coordinate17)
+        mapView.addAnnotation(pin17)
+        
+        //railroad crossing at greene st
+        let coordinate18 = CLLocationCoordinate2D(latitude: 33.999646, longitude: -81.018650)
+        let region18 = MKCoordinateRegionMakeWithDistance(coordinate18, 1000, 1000)
+        mapView.setRegion(region18, animated: true)
+        
+        //creates pin18 and names it
+        pin18 = RailRoadCrossing(title: "Greene St Crossing", Subtitle: "trains may come to stop", coordinate: coordinate18)
+        mapView.addAnnotation(pin18)
+        
+        
         
         
         
@@ -250,8 +331,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         _ = MKAnnotationView(annotation: pin7, reuseIdentifier: "RRPin")    //rosewood dr and assembly st pin
         _ = MKAnnotationView(annotation: pin8, reuseIdentifier: "RRPin")    //S assembly st and dreyfuss rd pin
         _ = MKAnnotationView(annotation: pin9, reuseIdentifier: "RRPin")    //catawba st pin
-        _ = MKAnnotationView(annotation: pin10, reuseIdentifier: "RRPin")    //Assembly st near the lofts pin
+        _ = MKAnnotationView(annotation: pin10, reuseIdentifier: "RRPin")   //assembly st near the lofts pin
+        _ = MKAnnotationView(annotation: pin11, reuseIdentifier: "RRPin")   //gadsden st 1 pin
+        _ = MKAnnotationView(annotation: pin12, reuseIdentifier: "RRPin")   //gadsden st 2 pin
+        _ = MKAnnotationView(annotation: pin13, reuseIdentifier: "RRPin")   //gadsden st 3 pin
+        _ = MKAnnotationView(annotation: pin14, reuseIdentifier: "RRPin")   //whaley st near lincoln st pin
+        _ = MKAnnotationView(annotation: pin15, reuseIdentifier: "RRPin")   //lincoln st 1 (north) pin
+        _ = MKAnnotationView(annotation: pin16, reuseIdentifier: "RRPin")   //lincoln st 2 (south) pin
+        _ = MKAnnotationView(annotation: pin17, reuseIdentifier: "RRPin")   //wheat st pin
+        _ = MKAnnotationView(annotation: pin18, reuseIdentifier: "RRPin")   //greene st pin
 
+        
+        
         
         annotationView.image = UIImage(named: "rail-road-crossing-cross-signal")
         //change pin size to correctly fit the mapview, without the next few lines this image is huge
