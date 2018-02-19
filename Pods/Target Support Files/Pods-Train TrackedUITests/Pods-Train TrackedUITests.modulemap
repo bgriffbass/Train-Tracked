@@ -1,0 +1,6 @@
+framework module Pods_Train_TrackedUITests {
+  umbrella header "Pods-Train TrackedUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -15,24 +15,24 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     @IBOutlet weak var mapView: MKMapView!
     
     //pulls railroad crossing pin and assigns each crossing a pin
-    var pin1:RailRoadCrossing!  //divine street
-    var pin2:RailRoadCrossing!  //main street
-    var pin3:RailRoadCrossing!  //assembly street
-    var pin4:RailRoadCrossing!  //whaley street
-    var pin5:RailRoadCrossing!  //pickens street
-    var pin6:RailRoadCrossing!  //huger street
-    var pin7:RailRoadCrossing!  //rosewood dr and assembly st
-    var pin8:RailRoadCrossing!  //S assembly st and dreyfuss st
-    var pin9:RailRoadCrossing!  //catawba st
-    var pin10:RailRoadCrossing! //assembly st near the lofts
-    var pin11:RailRoadCrossing! //gadsden st 1 (north)
-    var pin12:RailRoadCrossing! //gadsden st 2 (middle)
-    var pin13:RailRoadCrossing! //gadsden st 3 (south)
-    var pin14:RailRoadCrossing! //whaley st near lincoln st
-    var pin15:RailRoadCrossing! //lincoln st 1 (north)
-    var pin16:RailRoadCrossing! //lincoln st 2 (south)
-    var pin17:RailRoadCrossing! //wheat st
-    var pin18:RailRoadCrossing! //greene st
+    var pin1:RailRoadCrossing!   //divine street
+    var pin2:RailRoadCrossing!   //main street
+    var pin3:RailRoadCrossing!   //assembly street
+    var pin4:RailRoadCrossing!   //whaley street
+    var pin5:RailRoadCrossing!   //pickens street
+    var pin6:RailRoadCrossing!   //huger street
+    var pin7:RailRoadCrossing!   //rosewood dr and assembly st
+    var pin8:RailRoadCrossing!   //S assembly st and dreyfuss st
+    var pin9:RailRoadCrossing!   //catawba st
+    var pin10:RailRoadCrossing!  //assembly st near the lofts
+    var pin11:RailRoadCrossing!  //gadsden st 1 (north)
+    var pin12:RailRoadCrossing!  //gadsden st 2 (middle)
+    var pin13:RailRoadCrossing!  //gadsden st 3 (south)
+    var pin14:RailRoadCrossing!  //whaley st near lincoln st
+    var pin15:RailRoadCrossing!  //lincoln st 1 (north)
+    var pin16:RailRoadCrossing!  //lincoln st 2 (south)
+    var pin17:RailRoadCrossing!  //wheat st
+    var pin18:RailRoadCrossing!  //greene st
     
     
     
