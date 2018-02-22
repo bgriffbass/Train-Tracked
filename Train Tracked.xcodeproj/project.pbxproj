@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0413DAB2203B4FF90018E8DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0413DAB1203B4FF90018E8DD /* GoogleService-Info.plist */; };
 		1E67CD532023C8BB00806FF3 /* RailRoadCrossing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E67CD522023C8BB00806FF3 /* RailRoadCrossing.swift */; };
 		1EB265E656D43882D4FFECFB /* Pods_Train_TrackedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EC428C1E5EE3DA0661C107 /* Pods_Train_TrackedTests.framework */; };
 		985ED64920237AC900EA1F87 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985ED64820237AC900EA1F87 /* MapKit.framework */; };
@@ -18,6 +17,7 @@
 		98611D0D20223D3000BF1C67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98611D0B20223D3000BF1C67 /* LaunchScreen.storyboard */; };
 		98611D1820223D3100BF1C67 /* Train_TrackedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98611D1720223D3100BF1C67 /* Train_TrackedTests.swift */; };
 		98611D2320223D3100BF1C67 /* Train_TrackedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98611D2220223D3100BF1C67 /* Train_TrackedUITests.swift */; };
+		9894699A203F219F00C4A563 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98946999203F219E00C4A563 /* GoogleService-Info.plist */; };
 		C8939C588047766CBBA000F3 /* Pods_Train_Tracked.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42EE0B4ABC32BB80683A33CF /* Pods_Train_Tracked.framework */; };
 		F5AF3C7006CDFD0D1FF7F530 /* Pods_Train_TrackedUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53C22E82FD6F685AA0AD9105 /* Pods_Train_TrackedUITests.framework */; };
 /* End PBXBuildFile section */
@@ -40,7 +40,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0413DAB1203B4FF90018E8DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0E5CAC83DFBD799443073A8E /* Pods-Train TrackedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Train TrackedTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Train TrackedTests/Pods-Train TrackedTests.release.xcconfig"; sourceTree = "<group>"; };
 		1E67CD512023AAAC00806FF3 /* Train Tracked.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Train Tracked.entitlements"; sourceTree = "<group>"; };
 		1E67CD522023C8BB00806FF3 /* RailRoadCrossing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailRoadCrossing.swift; sourceTree = "<group>"; };
@@ -65,6 +64,7 @@
 		98611D1E20223D3100BF1C67 /* Train TrackedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Train TrackedUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98611D2220223D3100BF1C67 /* Train_TrackedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Train_TrackedUITests.swift; sourceTree = "<group>"; };
 		98611D2420223D3100BF1C67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98946999203F219E00C4A563 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E387D8E8B03D5CC437CD979A /* Pods-Train Tracked.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Train Tracked.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Train Tracked/Pods-Train Tracked.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,7 +141,7 @@
 				98611D0B20223D3000BF1C67 /* LaunchScreen.storyboard */,
 				98611D0E20223D3000BF1C67 /* Info.plist */,
 				1E67CD522023C8BB00806FF3 /* RailRoadCrossing.swift */,
-				0413DAB1203B4FF90018E8DD /* GoogleService-Info.plist */,
+				98946999203F219E00C4A563 /* GoogleService-Info.plist */,
 			);
 			path = "Train Tracked";
 			sourceTree = "<group>";
@@ -311,7 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98611D0D20223D3000BF1C67 /* LaunchScreen.storyboard in Resources */,
-				0413DAB2203B4FF90018E8DD /* GoogleService-Info.plist in Resources */,
+				9894699A203F219F00C4A563 /* GoogleService-Info.plist in Resources */,
 				98611D0A20223D3000BF1C67 /* Assets.xcassets in Resources */,
 				98611D0820223D3000BF1C67 /* Main.storyboard in Resources */,
 			);
