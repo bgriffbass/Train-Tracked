@@ -2,7 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "rail-road-crossing-cross-signal.png",
+      "filename" : "icons8-railroad-crossing-48.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "icons8-railroad-crossing-49.png",
       "scale" : "1x"
     },
     {

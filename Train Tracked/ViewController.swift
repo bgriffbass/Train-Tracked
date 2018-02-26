@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import Firebase
 
 class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
@@ -341,12 +342,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         _ = MKAnnotationView(annotation: pin17, reuseIdentifier: "RRPin")   //wheat st pin
         _ = MKAnnotationView(annotation: pin18, reuseIdentifier: "RRPin")   //greene st pin
 
-        
+        annotationView.canShowCallout = true
         
         
         annotationView.image = UIImage(named: "rail-road-crossing-cross-signal")
         //change pin size to correctly fit the mapview, without the next few lines this image is huge
-        let transform = CGAffineTransform(scaleX: 0.05, y: 0.05)
+        let transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
         annotationView.transform = transform
         return annotationView
       }
