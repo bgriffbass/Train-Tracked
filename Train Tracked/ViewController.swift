@@ -15,7 +15,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
 
     @IBOutlet weak var mapView: MKMapView!
     
-    //pulls railroad crossing pin and assigns each crossing a pin
+    //creation of variables and pulls railroad crossing pin, assigns each crossing a pin
     var pin1:RailRoadCrossing!   //divine street
     var pin2:RailRoadCrossing!   //main street
     var pin3:RailRoadCrossing!   //assembly street
@@ -38,7 +38,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     
     
-    //initiates location manager
+    //initiate location manager
     let locationManager = CLLocationManager()
     
     
@@ -67,7 +67,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         /*
         
-        //Direction manager
+         //Direction manager : this would give the user directions for the best route around a blocked train stop
         mapView.showsScale = true
         mapView.showsPointsOfInterest = true
         
@@ -119,13 +119,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         
         
-        
-        
-        
-        
-        
-        
-        
+        //Assignment of coordinates and pins for each crossing
         
         //railroad crossing at divine street
         let coordinate1 = CLLocationCoordinate2D(latitude: 33.991978, longitude: -81.038677)
